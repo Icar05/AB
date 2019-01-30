@@ -15,7 +15,7 @@ import UIKit
 class DetailCreatorImpl: DetailCreator {
     
     
-    func printModel(model: Model) {
+    func printModel(model: RootClass) {
         
     }
     
@@ -29,7 +29,7 @@ class DetailCreatorImpl: DetailCreator {
     
     
     
-    static func assembleModule(model: Model) -> UIViewController {
+    static func assembleModule() -> UIViewController {
         
         let view = UIStoryboard(name: named, bundle: nil)
             .instantiateViewController(withIdentifier: indifier) as! DetailViewController

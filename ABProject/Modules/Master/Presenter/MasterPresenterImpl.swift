@@ -7,17 +7,34 @@
 //
 
 import Foundation
+import RxSwift
 
 
 class MasterPresenterImpl: MasterPresenter {
     
     weak var view: MasterView?
+    
     var interactor: MasterInteractor!
+    
     var creator: MasterCreator!
+    
+    private var disposeBag = DisposeBag()
     
     
     func viewDidLoad() {
-        interactor.fetchArticles()
+        
+        interactor.getWeatcher()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { (n) in
+                 
+            }, onError: { (error) in
+              
+            }, onCompleted: {
+            
+            }, onDisposed: {
+                
+            }).disposed(by: disposeBag)
+        
     }
     
 

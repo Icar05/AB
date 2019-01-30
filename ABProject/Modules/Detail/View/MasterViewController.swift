@@ -14,7 +14,7 @@ class MasterViewController: UIViewController {
     var presenter: MasterPresenter!
     
     @IBAction func goToDetail() {
-        Router.presentDetailScreen(current: self, model: Model())
+        Router.presentDetailScreen(current: self)
     }
     
     
@@ -30,13 +30,14 @@ class MasterViewController: UIViewController {
 
 extension MasterViewController : MasterView{
     
-    func showNoContentScreen() {
-        
+    
+    func showWeather(_ data: [RootClass]) {
+        for model: RootClass in data{
+            print("data "+model.city.country)
+        }
     }
     
-    func showHelloData(_ data: Model) {
-     
-    }
+
     
     
 }

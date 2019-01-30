@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 protocol MasterCreator: class {
     var viewController: UIViewController? { get set }
@@ -26,14 +27,14 @@ protocol MasterPresenter: class {
 }
 
 protocol MasterInteractor: class {
-    func fetchArticles()
+    var globalProvider: GlobalProvider! {get set}
+    func getWeatcher() -> Observable<[RootClass]>
 }
 
 protocol MasterView: class {
     var presenter: MasterPresenter! { get set }
     
-    func showNoContentScreen()
-    func showHelloData(_ data: Model)
+    func showWeather(_ data: [RootClass])
 }
 
 

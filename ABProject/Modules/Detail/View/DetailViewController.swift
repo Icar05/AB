@@ -26,7 +26,7 @@ extension DetailViewController : DetailView{
         
     }
     
-    func showHelloData(_ data: Model) {
+    func showHelloData(_ data: RootClass) {
        
     }
     

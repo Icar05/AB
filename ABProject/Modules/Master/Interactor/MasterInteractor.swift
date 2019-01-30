@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import RxSwift
 
 class MasterInteratorImpl: MasterInteractor {
     
-    func fetchArticles() {}
+    weak var globalProvider: GlobalProvider!
+    
+    func getWeatcher() -> Observable<[RootClass]> {
+        return globalProvider.getWeather(city: "Kiev")
+    }
     
 }

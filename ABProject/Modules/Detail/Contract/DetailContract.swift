@@ -12,9 +12,9 @@ import UIKit
 protocol DetailCreator: class {
     var viewController: UIViewController? { get set }
     
-    func printModel(model: Model)
+    func printModel(model: RootClass)
     
-    static func assembleModule(model: Model) -> UIViewController
+    static func assembleModule() -> UIViewController
 }
 
 protocol DetailPresenter: class {
@@ -33,5 +33,5 @@ protocol DetailView: class {
     var presenter: DetailPresenter! { get set }
     
     func showNoContentScreen()
-    func showHelloData(_ data: Model)
+    func showHelloData(_ data: RootClass)
 }

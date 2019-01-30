@@ -32,10 +32,12 @@ class MasterCreatorImpl:   MasterCreator {
         let presenter = MasterPresenterImpl()
         let interactor = MasterInteratorImpl()
         let masterCreator = MasterCreatorImpl()
+        let globalProvider = GlobalProvider()
         
         let navigation = UINavigationController(rootViewController: view)
         
         view.presenter = presenter
+        interactor.globalProvider = globalProvider
         
         presenter.view = view
         presenter.interactor = interactor

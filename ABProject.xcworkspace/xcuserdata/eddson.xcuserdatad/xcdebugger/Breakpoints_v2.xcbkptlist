@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558295.661357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;ABProject.RootClass&gt;) -&gt; () in ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.031651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.034506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558296.301121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558296.78948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558297.269253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558297.709011"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558299.349022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.17834"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.181089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558299.933166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;ABProject.RootClass&gt;) -&gt; () in ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.18836"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.1911089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558300.2853841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.198221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;ABProject.RootClass&gt;) -&gt; () in ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.201039"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558300.645138"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558301.06113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+            timestampString = "570558302.0051171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.219961"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; () in ABProject.MasterPresenterImpl.viewDidLoad() -&gt; ()"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Modules/Master/Presenter/MasterPresenterImpl.swift"
+                  timestampString = "570560025.223158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.845984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.2303571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.233108"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.8463531"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.245576"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.24831"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.8464971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846563"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846692"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846756"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846821"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846886"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.308717"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.3120151"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.846952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.847018"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.325156"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;) -&gt; RxSwift.Disposable in ABProject.GlobalProvider.getWeather(city: Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;ABProject.RootClass&gt;&gt;"
+                  moduleName = "ABProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eddson/Desktop/ABProject/ABProject/Providers/GlobalProvider.swift"
+                  timestampString = "570560025.327878"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.847083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.8471479"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABProject/Providers/GlobalProvider.swift"
+            timestampString = "570560024.847212"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
