@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/*
+ detail
+ */
 class DetailCreatorImpl: DetailCreator {
     
     

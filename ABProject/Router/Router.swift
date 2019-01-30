@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+
+/*
+    class that will route to entity
+ */
 class Router {
     
     
