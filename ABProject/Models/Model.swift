@@ -10,6 +10,7 @@ import Foundation
 
 
 struct Model{
+    
     var date = ""
     var title = ""
 }
