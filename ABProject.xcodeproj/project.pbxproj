@@ -28,7 +28,6 @@
 		9B51D50822020B14003FCC62 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51D50722020B14003FCC62 /* Wind.swift */; };
 		9B51D50A22020B36003FCC62 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51D50922020B36003FCC62 /* List.swift */; };
 		9B51D50C22020B52003FCC62 /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51D50B22020B52003FCC62 /* RootClass.swift */; };
-		9B69AD5922018E7500A8A187 /* google-alphabet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B69AD5822018E7500A8A187 /* google-alphabet.jpg */; };
 		9B69AD6B220192B600A8A187 /* M.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B69AD6A220192B600A8A187 /* M.storyboard */; };
 		9B69AD6D220192EC00A8A187 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B69AD6C220192EC00A8A187 /* Detail.storyboard */; };
 		9B69AD71220196E200A8A187 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69AD70220196E200A8A187 /* MasterViewController.swift */; };
@@ -65,7 +64,6 @@
 		9B51D50722020B14003FCC62 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		9B51D50922020B36003FCC62 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		9B51D50B22020B52003FCC62 /* RootClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
-		9B69AD5822018E7500A8A187 /* google-alphabet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "google-alphabet.jpg"; path = "../../../Downloads/google-alphabet.jpg"; sourceTree = "<group>"; };
 		9B69AD6A220192B600A8A187 /* M.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = M.storyboard; sourceTree = "<group>"; };
 		9B69AD6C220192EC00A8A187 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		9B69AD70220196E200A8A187 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 				9B3C9E5E22008EF700AE4C23 /* Router */,
 				9B51D4F42201E494003FCC62 /* Providers */,
 				9B3C9E38220081A500AE4C23 /* Assets.xcassets */,
-				9B69AD5822018E7500A8A187 /* google-alphabet.jpg */,
 				9B3C9E3A220081A500AE4C23 /* LaunchScreen.storyboard */,
 				9B3C9E3D220081A500AE4C23 /* Info.plist */,
 			);
@@ -367,7 +364,6 @@
 			files = (
 				9B3C9E3C220081A500AE4C23 /* LaunchScreen.storyboard in Resources */,
 				9B69AD6B220192B600A8A187 /* M.storyboard in Resources */,
-				9B69AD5922018E7500A8A187 /* google-alphabet.jpg in Resources */,
 				9B69AD6D220192EC00A8A187 /* Detail.storyboard in Resources */,
 				9B3C9E39220081A500AE4C23 /* Assets.xcassets in Resources */,
 			);

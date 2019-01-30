@@ -24,14 +24,17 @@ class GlobalProvider{
                 .request(self.getUrl(), method: .get)
                 .validate()
                 .responseArray(completionHandler: { (response: DataResponse<[RootClass]>) in
+                    
                     switch response.result {
-                    case .success(let models):
-                        observer.onNext(models)
-                        observer.onCompleted()
                         
-                    case .failure(let error):
-                        observer.onError(error)
-                    }
+                        case .success(let models):
+                            observer.onNext(models)
+                            observer.onCompleted()
+                        
+                        case .failure(let error):
+                            observer.onError(error)
+                        
+                        }
                 })
             
             return Disposables.create(with: {
