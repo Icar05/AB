@@ -32,6 +32,7 @@ class DetailCreatorImpl: DetailCreator {
             .instantiateViewController(withIdentifier: indifier) as! DetailViewController
         
         
+        
         let presenter = DetailPresenterImpl()
         let interactor = DetailInteractorImpl()
         let masterCreator = DetailCreatorImpl()
