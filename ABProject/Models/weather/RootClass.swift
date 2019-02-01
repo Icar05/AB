@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ObjectMapper
 
 //MARK: - RootClass
 public struct RootClass : Codable{
