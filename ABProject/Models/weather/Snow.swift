@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - Snow
-public struct Snow {
+public struct Snow : Codable {
     
 //    public var 3h : Float!
     

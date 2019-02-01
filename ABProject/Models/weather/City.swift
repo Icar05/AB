@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - City
-public struct City {
+public struct City : Codable{
     
     public var coord : Coord!
     public var country : String!

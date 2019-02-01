@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - Cloud
-public struct Cloud {
+public struct Cloud : Codable{
     
     public var all : Int!
     

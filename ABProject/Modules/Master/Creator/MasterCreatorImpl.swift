@@ -29,20 +29,20 @@ class MasterCreatorImpl:   MasterCreator {
             .instantiateViewController(withIdentifier: indifier) as! MasterViewController
         
         
-        let presenter = MasterPresenterImpl()
-        let interactor = MasterInteratorImpl()
-        let masterCreator = MasterCreatorImpl()
         let globalProvider = GlobalProvider()
+        let presenter = MasterPresenterImpl()
+        let interactor = MasterInteratorImpl(provider: globalProvider)
+        let masterCreator = MasterCreatorImpl()
+        
         
         let navigation = UINavigationController(rootViewController: view)
         
-        view.presenter = presenter
-        interactor.globalProvider = globalProvider
         
         presenter.view = view
         presenter.interactor = interactor
         presenter.creator = masterCreator
         
+        view.presenter = presenter
         masterCreator.viewController = view
         
         return navigation

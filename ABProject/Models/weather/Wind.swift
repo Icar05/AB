@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - Wind
-public struct Wind {
+public struct Wind : Codable {
     
     public var deg : Float!
     public var speed : Float!

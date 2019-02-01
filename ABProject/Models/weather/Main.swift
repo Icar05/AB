@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - Main
-public struct Main {
+public struct Main: Codable {
     
     public var grndLevel : Float!
     public var humidity : Int!

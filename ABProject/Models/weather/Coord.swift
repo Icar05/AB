@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - Coord
-public struct Coord {
+public struct Coord : Codable{
     
     public var lat : Float!
     public var lon : Float!

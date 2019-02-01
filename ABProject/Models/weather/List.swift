@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - List
-public struct List {
+public struct List: Codable{
     
     public var clouds : Cloud!
     public var dt : Int!

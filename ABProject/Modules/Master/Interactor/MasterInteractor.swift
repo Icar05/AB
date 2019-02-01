@@ -11,9 +11,16 @@ import RxSwift
 
 class MasterInteratorImpl: MasterInteractor {
     
-    weak var globalProvider: GlobalProvider!
     
-    func getWeatcher() -> Observable<[RootClass]> {
+    var globalProvider: GlobalProvider!
+    
+    init(provider: GlobalProvider!){
+        self.globalProvider = provider
+    }
+    
+    
+    
+    func getWeatcher() -> Observable<[List]> {
         return globalProvider.getWeather(city: "Kiev")
     }
     

@@ -25,14 +25,15 @@ class MasterPresenterImpl: MasterPresenter {
         
         interactor.getWeatcher()
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (n) in
-                 
+            .subscribe(
+                onNext: { (n) in
+                    print(n.count)
             }, onError: { (error) in
-              
+                    print(error)
             }, onCompleted: {
-            
+                print("onCompleted")
             }, onDisposed: {
-                
+                print("onDisposed")
             }).disposed(by: disposeBag)
         
     }

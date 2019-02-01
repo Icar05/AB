@@ -15,27 +15,37 @@ class GlobalProvider{
     
     
     
+    let keyList = "list"
     
     
-    func getWeather(city: String) -> Observable<[RootClass]> {
+
+    func getWeather(city: String) -> Observable<[List]> {
         
-        return Observable<[RootClass]>.create { observer -> Disposable in
+        return Observable<[List]>.create { observer -> Disposable in
             let request = Alamofire
-                .request(self.getUrl(), method: .get)
-                .validate()
-                .responseArray(completionHandler: { (response: DataResponse<[RootClass]>) in
+                        .request(self.getUrl(city: city))
+                        .validate()
+                        .responseJSON { response in
+                            
+                            let value:  [String:Any]?  = response.result.value as? [String:Any]
                     
-                    switch response.result {
+                                if let listValues =  value?[self.keyList] {
+                      
+                                    let decoder = JSONDecoder()
                         
-                        case .success(let models):
-                            observer.onNext(models)
-                            observer.onCompleted()
-                        
-                        case .failure(let error):
-                            observer.onError(error)
-                        
+                                    if let data = try? JSONSerialization.data(withJSONObject: listValues as Any , options:[]){
+                                        do{
+                                            let content:[List] = try decoder.decode([List].self, from: data)
+                                                observer.onNext(content)
+                                                observer.onCompleted()
+                                          }catch let er as NSError{
+                                                observer.onError(er)
+                                          }
+                                        }
+                                }
+                            
                         }
-                })
+     
             
             return Disposables.create(with: {
                 request.cancel()
@@ -43,12 +53,10 @@ class GlobalProvider{
         }
     }
     
+
     
     
-    
-    func getUrl()-> String{
-        
-        let city = "München"
+    private func getUrl(city: String)-> String{
         
         let lang = "ua"
         

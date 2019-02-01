@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - Sy
-public struct Sy {
+public struct Sy : Codable{
     
     public var pod : String!
     

@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - Rain
-public struct Rain {
+public struct Rain : Codable{
     
     
 }

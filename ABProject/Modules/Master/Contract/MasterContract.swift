@@ -28,7 +28,7 @@ protocol MasterPresenter: class {
 
 protocol MasterInteractor: class {
     var globalProvider: GlobalProvider! {get set}
-    func getWeatcher() -> Observable<[RootClass]>
+    func getWeatcher() -> Observable<[List]>
 }
 
 protocol MasterView: class {
