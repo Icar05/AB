@@ -9,30 +9,31 @@
 import Foundation
 import UIKit
 
-class MasterCreatorImpl:   MasterCreator {
-    
-    static let named = "M"
-    
-    static let indifier = "MasterViewController"
+class MasterCreatorImpl:   BaseCreator {
     
     
-    func showHello() {print("hello")}
     
     
-    weak var viewController: UIViewController?
     
+    static func getControllerIndifier() -> String {
+        return "MasterViewController"
+    }
+    
+    static func getStoryBoardName() -> String {
+        return "M"
+    }
     
     
     static func assembleModule() -> UIViewController {
         
-        let view = UIStoryboard(name: named, bundle: nil)
-            .instantiateViewController(withIdentifier: indifier) as! MasterViewController
+        let view = UIStoryboard(name: getStoryBoardName(), bundle: nil)
+            .instantiateViewController(withIdentifier: getControllerIndifier()) as! MasterViewController
         
         
         let globalProvider = GlobalProvider()
         let presenter = MasterPresenterImpl()
         let interactor = MasterInteratorImpl(provider: globalProvider)
-        let masterCreator = MasterCreatorImpl()
+       
         
         
         let navigation = UINavigationController(rootViewController: view)
@@ -40,10 +41,9 @@ class MasterCreatorImpl:   MasterCreator {
         
         presenter.view = view
         presenter.interactor = interactor
-        presenter.creator = masterCreator
-        
+    
         view.presenter = presenter
-        masterCreator.viewController = view
+      
         
         return navigation
     }

@@ -21,7 +21,7 @@ class MasterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        presenter.onViewDidLoad()
 
         // Do any additional setup after loading the view.
     }

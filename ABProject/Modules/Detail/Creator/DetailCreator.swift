@@ -12,41 +12,37 @@ import UIKit
 /*
  detail
  */
-class DetailCreatorImpl: DetailCreator {
+class DetailCreatorImpl: BaseCreator {
     
     
-    func printModel(model: RootClass) {
-        
+    
+    
+    static func getControllerIndifier() -> String {
+        return "DetailViewController"
     }
     
-    
-    static let named = "Detail"
-    
-    static let indifier = "DetailViewController"
-    
-    
-    weak var viewController: UIViewController?
+    static func getStoryBoardName() -> String {
+         return "Detail"
+    }
     
     
     
     static func assembleModule() -> UIViewController {
         
-        let view = UIStoryboard(name: named, bundle: nil)
-            .instantiateViewController(withIdentifier: indifier) as! DetailViewController
-        
+        let view = UIStoryboard(name: getStoryBoardName(), bundle: nil)
+            .instantiateViewController(withIdentifier: getControllerIndifier()) as! DetailViewController
         
         
         let presenter = DetailPresenterImpl()
         let interactor = DetailInteractorImpl()
-        let masterCreator = DetailCreatorImpl()
+    
                 
         view.presenter = presenter
         
         presenter.view = view
         presenter.interactor = interactor
-        presenter.creator = masterCreator
-        
-        masterCreator.viewController = view
+     
+    
         
         return view
     }

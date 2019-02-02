@@ -10,20 +10,11 @@ import Foundation
 import UIKit
 import RxSwift
 
-protocol MasterCreator: class {
-    var viewController: UIViewController? { get set }
-    
-    func showHello()
-    
-    static func assembleModule() -> UIViewController
-}
 
 protocol MasterPresenter: class {
     var view: MasterView? { get set }
     var interactor: MasterInteractor! { get set }
-    var creator: MasterCreator! { get set }
-
-    func viewDidLoad()
+    func onViewDidLoad()
 }
 
 protocol MasterInteractor: class {

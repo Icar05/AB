@@ -16,12 +16,11 @@ class MasterPresenterImpl: MasterPresenter {
     
     var interactor: MasterInteractor!
     
-    var creator: MasterCreator!
     
     private var disposeBag = DisposeBag()
     
     
-    func viewDidLoad() {
+    func onViewDidLoad() {
         
         interactor.getWeatcher()
             .observeOn(MainScheduler.instance)
