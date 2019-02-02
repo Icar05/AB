@@ -29,14 +29,11 @@ class DetailCreatorImpl: BaseCreator {
     
     static func assembleModule() -> UIViewController {
         
-        let view = UIStoryboard(name: getStoryBoardName(), bundle: nil)
-            .instantiateViewController(withIdentifier: getControllerIndifier()) as! DetailViewController
-        
+        let view = getSelfUIViewController() as! DetailViewController
         
         let presenter = DetailPresenterImpl()
         let interactor = DetailInteractorImpl()
     
-                
         view.presenter = presenter
         
         presenter.view = view

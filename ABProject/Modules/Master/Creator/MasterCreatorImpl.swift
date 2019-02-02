@@ -26,16 +26,12 @@ class MasterCreatorImpl:   BaseCreator {
     
     static func assembleModule() -> UIViewController {
         
-        let view = UIStoryboard(name: getStoryBoardName(), bundle: nil)
-            .instantiateViewController(withIdentifier: getControllerIndifier()) as! MasterViewController
-        
+        let view = getSelfUIViewController() as! MasterViewController
         
         let globalProvider = GlobalProvider()
         let presenter = MasterPresenterImpl()
         let interactor = MasterInteratorImpl(provider: globalProvider)
        
-        
-        
         let navigation = UINavigationController(rootViewController: view)
         
         

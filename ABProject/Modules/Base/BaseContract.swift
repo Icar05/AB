@@ -14,3 +14,12 @@ protocol BaseCreator {
     static func getControllerIndifier() -> String
     static func getStoryBoardName() -> String
 }
+
+extension BaseCreator{
+    static func getSelfUIViewController() -> UIViewController{
+        let view = UIStoryboard(name: getStoryBoardName(), bundle: nil)
+            .instantiateViewController(withIdentifier: getControllerIndifier())
+        
+        return view
+    }
+}
