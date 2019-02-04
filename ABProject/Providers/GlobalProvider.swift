@@ -40,7 +40,15 @@ class GlobalProvider{
                                           }catch let er as NSError{
                                                 observer.onError(er)
                                           }
-                                        }
+                                    }else{
+                                        let error : NSError = NSError(domain: "GlobalProvider",code: -1,userInfo: [NSLocalizedDescriptionKey:"error while serialization"])
+                                        
+                                            observer.onError(error)
+                                    }
+                                } else{
+                                        let error : NSError = NSError(domain: "GlobalProvider",code: -1,userInfo: [NSLocalizedDescriptionKey:"Responce return nil"])
+                                
+                                            observer.onError(error)
                                 }
                             
                         }
@@ -61,8 +69,10 @@ class GlobalProvider{
         
         let testKey = "bfe6f23754abc6a8d183b5a28ffaad23"
         
-        return "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=\(testKey)&lang=\(lang)"
+        return "http://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=\(testKey)&lang=\(lang)"
     }
 }
+
+
 
 

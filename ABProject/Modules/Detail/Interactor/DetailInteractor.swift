@@ -7,12 +7,20 @@
 //
 
 import Foundation
+import RxSwift
 
 class DetailInteractorImpl: DetailInteractor {
     
     
-    func fetchArticles() {
-        //todo fetch
+    var globalProvider: GlobalProvider!
+    
+    init(provider: GlobalProvider!){
+        self.globalProvider = provider
+    }
+    
+    
+    func getWeatcher(city: String) -> Observable<[List]> {
+        return globalProvider.getWeather(city: city)
     }
     
    

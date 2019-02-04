@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGC-YH-gDo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет данных" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGC-YH-gDo">
                                 <rect key="frame" x="137.5" y="312" width="100" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="UnG-nE-RUq"/>
@@ -28,14 +28,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aw5-kb-hn9">
+                                <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="MbG-pd-xaa"/>
+                                    <constraint firstAttribute="height" constant="40" id="yKm-O3-96L"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dGC-YH-gDo" firstAttribute="centerX" secondItem="vzq-Gz-ErH" secondAttribute="centerX" id="0CR-3b-tNe"/>
+                            <constraint firstItem="aw5-kb-hn9" firstAttribute="centerY" secondItem="vzq-Gz-ErH" secondAttribute="centerY" id="HCT-kS-eRU"/>
                             <constraint firstItem="dGC-YH-gDo" firstAttribute="centerY" secondItem="vzq-Gz-ErH" secondAttribute="centerY" id="cb3-Qh-g1T"/>
+                            <constraint firstItem="aw5-kb-hn9" firstAttribute="centerX" secondItem="vzq-Gz-ErH" secondAttribute="centerX" id="zdu-nq-uKR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mVr-Wn-GhC"/>
                     </view>
+                    <connections>
+                        <outlet property="emptyView" destination="dGC-YH-gDo" id="fcn-Dv-xaa"/>
+                        <outlet property="loader" destination="aw5-kb-hn9" id="xzt-ba-rOW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byS-Z8-eyx" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxSwift
+
 
 
 class MasterPresenterImpl: MasterPresenter {
@@ -17,23 +17,8 @@ class MasterPresenterImpl: MasterPresenter {
     var interactor: MasterInteractor!
     
     
-    private var disposeBag = DisposeBag()
-    
-    
+
     func onViewDidLoad() {
-        
-        interactor.getWeatcher()
-            .observeOn(MainScheduler.instance)
-            .subscribe(
-                onNext: { (n) in
-                    print(n.count)
-            }, onError: { (error) in
-                    print(error)
-            }, onCompleted: {
-                print("onCompleted")
-            }, onDisposed: {
-                print("onDisposed")
-            }).disposed(by: disposeBag)
         
     }
     

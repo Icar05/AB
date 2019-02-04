@@ -8,8 +8,6 @@
 
 import Foundation
 import UIKit
-import RxSwift
-
 
 protocol MasterPresenter: class {
     var view: MasterView? { get set }
@@ -18,14 +16,11 @@ protocol MasterPresenter: class {
 }
 
 protocol MasterInteractor: class {
-    var globalProvider: GlobalProvider! {get set}
-    func getWeatcher() -> Observable<[List]>
+    
 }
 
 protocol MasterView: class {
     var presenter: MasterPresenter! { get set }
-    
-    func showWeather(_ data: [RootClass])
 }
 
 

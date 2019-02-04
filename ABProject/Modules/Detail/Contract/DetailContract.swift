@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 protocol DetailCreator: class {
     var viewController: UIViewController? { get set }
@@ -22,16 +23,20 @@ protocol DetailPresenter: class {
     var interactor: DetailInteractor! { get set }
     var creator: DetailCreator! { get set }
     
+    func loadWeather(city: String)
     func viewDidLoad()
 }
 
 protocol DetailInteractor: class {
-    func fetchArticles()
+    var globalProvider: GlobalProvider! {get set}
+    func getWeatcher(city: String) -> Observable<[List]>
 }
 
 protocol DetailView: class {
     var presenter: DetailPresenter! { get set }
     
     func showNoContentScreen()
-    func showHelloData(_ data: RootClass)
+    func showLoading()
+    func showResultScreen(result: [List])
+    
 }

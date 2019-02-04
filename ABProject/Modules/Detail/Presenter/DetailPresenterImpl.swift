@@ -7,16 +7,42 @@
 //
 
 import Foundation
+import RxSwift
 
 class DetailPresenterImpl: DetailPresenter{
+  
     
     weak var view: DetailView?
+    
     var interactor: DetailInteractor!
+    
     var creator: DetailCreator!
+    
+    private var disposeBag = DisposeBag()
     
     
     func viewDidLoad() {
-        interactor.fetchArticles()
+      
+    }
+    
+    func loadWeather(city: String) {
+        view?.showLoading()
+        interactor.getWeatcher(city: city)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { (n) in
+                print("onNext")
+                self.view?.showResultScreen(result: n)
+               
+            }, onError: { (error) in
+                print("onError "+error.localizedDescription)
+                self.view?.showNoContentScreen()
+                
+            }, onCompleted: {
+                print("onCompleted")
+            }, onDisposed: {
+                print("onDisposed")
+            }).disposed(by: disposeBag)
     }
     
 }

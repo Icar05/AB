@@ -28,9 +28,9 @@ class MasterCreatorImpl:   BaseCreator {
         
         let view = getSelfUIViewController() as! MasterViewController
         
-        let globalProvider = GlobalProvider()
+
         let presenter = MasterPresenterImpl()
-        let interactor = MasterInteratorImpl(provider: globalProvider)
+        let interactor = MasterInteratorImpl()
        
         let navigation = UINavigationController(rootViewController: view)
         
