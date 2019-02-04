@@ -7,23 +7,49 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MasterViewController: UIViewController {
 
     
     var presenter: MasterPresenter!
     
+    private var disposeBag = DisposeBag()
+    
+    @IBOutlet weak var searchCityTF: UITextField!
+    
     @IBAction func goToDetail() {
         Router.presentDetailScreen(current: self)
     }
     
     
+    @IBOutlet weak var searchbtn: UIButton!
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.onViewDidLoad()
-
-        // Do any additional setup after loading the view.
+        hideKeyboardWhenTappedAround()
+        subscribeRxChanges()
+        
+    }
+    
+    private func subscribeRxChanges(){
+        
+        searchCityTF.rx.text.subscribe(onNext:{ text in
+            
+            if((text?.count)! > 0){
+                self.searchbtn.isEnabled = true
+                self.searchbtn.alpha = 1.0
+            }else{
+                self.searchbtn.isEnabled = false
+                self.searchbtn.alpha = 0.5
+            }
+            
+        }).disposed(by: disposeBag)
     }
 }
 
@@ -37,7 +63,17 @@ extension MasterViewController : MasterView{
         }
     }
     
-
+ 
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer =     UITapGestureRecognizer(target: self, action:    #selector(self.dismissKeyboard))
+            tap.cancelsTouchesInView = false
+            view.addGestureRecognizer(tap)
+    }
     
+
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
 }

@@ -18,34 +18,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z49-uq-WRl">
-                                <rect key="frame" x="137.5" y="312" width="100" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="PY7-Jt-omD"/>
-                                    <constraint firstAttribute="width" constant="100" id="QKC-yq-HZX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYb-g4-OaO">
-                                <rect key="frame" x="10" y="396" width="355" height="30"/>
-                                <state key="normal" title="goDetail"/>
+                                <rect key="frame" x="125" y="368.5" width="125" height="30"/>
+                                <color key="backgroundColor" red="0.10722347348928452" green="0.53391140699386597" blue="0.49514281749725342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="qqW-Mo-wGx"/>
+                                </constraints>
+                                <state key="normal" title="Найти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="goToDetail" destination="MBG-5N-5IF" eventType="touchUpInside" id="d6x-OZ-yZg"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Город" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1h-I1-PLo">
+                                <rect key="frame" x="20" y="318.5" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Это приложение покажет погоду по вашему городу" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z49-uq-WRl">
+                                <rect key="frame" x="65.5" y="255.5" width="244" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="sVk-AW-Z0s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.85987049341201782" green="0.82262307405471802" blue="0.60640555620193481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="z49-uq-WRl" firstAttribute="centerX" secondItem="VeU-ui-Fbo" secondAttribute="centerX" id="4Nu-RM-i7R"/>
-                            <constraint firstItem="z49-uq-WRl" firstAttribute="centerY" secondItem="VeU-ui-Fbo" secondAttribute="centerY" id="9KF-3f-YLA"/>
-                            <constraint firstItem="2mR-d7-HSe" firstAttribute="trailing" secondItem="cYb-g4-OaO" secondAttribute="trailing" constant="10" id="Ezb-A3-EPQ"/>
-                            <constraint firstItem="cYb-g4-OaO" firstAttribute="top" secondItem="z49-uq-WRl" secondAttribute="bottom" constant="41" id="f3i-EO-M9c"/>
-                            <constraint firstItem="cYb-g4-OaO" firstAttribute="leading" secondItem="2mR-d7-HSe" secondAttribute="leading" constant="10" id="jKB-xQ-QgY"/>
+                            <constraint firstItem="z49-uq-WRl" firstAttribute="centerX" secondItem="VeU-ui-Fbo" secondAttribute="centerX" id="QKH-dn-l3O"/>
+                            <constraint firstItem="x1h-I1-PLo" firstAttribute="top" secondItem="z49-uq-WRl" secondAttribute="bottom" constant="20" id="Uik-oZ-hdB"/>
+                            <constraint firstItem="2mR-d7-HSe" firstAttribute="trailing" secondItem="x1h-I1-PLo" secondAttribute="trailing" constant="20" id="gbT-ch-PFd"/>
+                            <constraint firstItem="x1h-I1-PLo" firstAttribute="centerY" secondItem="VeU-ui-Fbo" secondAttribute="centerY" id="iE2-TB-O1K"/>
+                            <constraint firstItem="x1h-I1-PLo" firstAttribute="leading" secondItem="2mR-d7-HSe" secondAttribute="leading" constant="20" id="jf5-SK-Kpz"/>
+                            <constraint firstItem="cYb-g4-OaO" firstAttribute="top" secondItem="x1h-I1-PLo" secondAttribute="bottom" constant="20" id="r4w-01-IJR"/>
+                            <constraint firstItem="cYb-g4-OaO" firstAttribute="centerX" secondItem="VeU-ui-Fbo" secondAttribute="centerX" id="vDP-T2-zBr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2mR-d7-HSe"/>
                     </view>
+                    <connections>
+                        <outlet property="searchCityTF" destination="x1h-I1-PLo" id="DjU-tI-4GO"/>
+                        <outlet property="searchbtn" destination="cYb-g4-OaO" id="vhC-D2-0pF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5H-yW-tX1" sceneMemberID="firstResponder"/>
             </objects>
