@@ -33,11 +33,9 @@ class DetailPresenterImpl: DetailPresenter{
                 onNext: { (n) in
                 print("onNext")
                 self.view?.showResultScreen(result: n)
-               
+
             }, onError: { (error) in
-                print("onError "+error.localizedDescription)
-                self.view?.showNoContentScreen()
-                
+                self.view?.showErrorScreen(error: error.localizedDescription)
             }, onCompleted: {
                 print("onCompleted")
             }, onDisposed: {

@@ -37,6 +37,7 @@ protocol DetailView: class {
     
     func showNoContentScreen()
     func showLoading()
+    func showErrorScreen(error: String)
     func showResultScreen(result: [List])
     
 }

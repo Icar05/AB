@@ -69,7 +69,7 @@ class GlobalProvider{
         
         let testKey = "bfe6f23754abc6a8d183b5a28ffaad23"
         
-        return "http://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=\(testKey)&lang=\(lang)"
+        return "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=\(testKey)&lang=\(lang)"
     }
 }
 

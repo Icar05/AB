@@ -20,6 +20,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        navigationController?.navigationBar.backItem?.title = "Anything Else"
+        
+        
+        
         presenter.viewDidLoad()
         presenter.loadWeather(city: city!)
     }
@@ -30,10 +34,21 @@ class DetailViewController: UIViewController {
 extension DetailViewController : DetailView{
     
     
+    
+    func showErrorScreen(error: String) {
+        loader?.isHidden = true
+        loader?.stopAnimating()
+        emptyView?.isHidden = false
+        emptyView?.text = error
+    }
+    
+    
+    
     func showNoContentScreen() {
         loader?.isHidden = true
         loader?.stopAnimating()
         emptyView?.isHidden = false
+        emptyView?.text = "No data"
     }
     
     
@@ -47,6 +62,10 @@ extension DetailViewController : DetailView{
         loader?.isHidden = true
         loader?.stopAnimating()
         emptyView?.isHidden = false
+        
+        
+        //todo remove
+        emptyView?.text = "Count of results -> \(result.count)"
     }
     
 

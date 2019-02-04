@@ -33,6 +33,12 @@ class MasterCreatorImpl:   BaseCreator {
         let interactor = MasterInteratorImpl()
        
         let navigation = UINavigationController(rootViewController: view)
+            navigation.navigationBar.tintColor = UIColor(red: 0, green: 0.6, blue: 0.3961, alpha: 1.0) /* #009965 */
+        
+        
+        let backButton = UIBarButtonItem()
+            backButton.title = "Назад"
+            navigation.navigationBar.topItem!.backBarButtonItem = backButton
         
         
         presenter.view = view
