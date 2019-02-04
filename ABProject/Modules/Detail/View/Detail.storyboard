@@ -18,37 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет данных" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGC-YH-gDo">
-                                <rect key="frame" x="20" y="312" width="335" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="nEi-qM-ibw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aw5-kb-hn9">
-                                <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="MbG-pd-xaa"/>
-                                    <constraint firstAttribute="height" constant="40" id="yKm-O3-96L"/>
-                                </constraints>
-                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPy-Ez-H5k" customClass="UILoadingView" customModule="ABProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.85987049339999999" green="0.82262307410000002" blue="0.60640555620000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dGC-YH-gDo" firstAttribute="centerX" secondItem="vzq-Gz-ErH" secondAttribute="centerX" id="0CR-3b-tNe"/>
-                            <constraint firstItem="aw5-kb-hn9" firstAttribute="centerY" secondItem="vzq-Gz-ErH" secondAttribute="centerY" id="HCT-kS-eRU"/>
-                            <constraint firstItem="dGC-YH-gDo" firstAttribute="centerY" secondItem="vzq-Gz-ErH" secondAttribute="centerY" id="cb3-Qh-g1T"/>
-                            <constraint firstItem="dGC-YH-gDo" firstAttribute="leading" secondItem="mVr-Wn-GhC" secondAttribute="leading" constant="20" id="i8R-ZF-fqo"/>
-                            <constraint firstItem="mVr-Wn-GhC" firstAttribute="trailing" secondItem="dGC-YH-gDo" secondAttribute="trailing" constant="20" id="jdg-f3-pYf"/>
-                            <constraint firstItem="aw5-kb-hn9" firstAttribute="centerX" secondItem="vzq-Gz-ErH" secondAttribute="centerX" id="zdu-nq-uKR"/>
+                            <constraint firstItem="NPy-Ez-H5k" firstAttribute="leading" secondItem="mVr-Wn-GhC" secondAttribute="leading" id="5Cn-cH-f3B"/>
+                            <constraint firstItem="NPy-Ez-H5k" firstAttribute="top" secondItem="mVr-Wn-GhC" secondAttribute="top" id="7jY-w9-grp"/>
+                            <constraint firstItem="mVr-Wn-GhC" firstAttribute="trailing" secondItem="NPy-Ez-H5k" secondAttribute="trailing" id="FeN-TQ-1hH"/>
+                            <constraint firstItem="mVr-Wn-GhC" firstAttribute="bottom" secondItem="NPy-Ez-H5k" secondAttribute="bottom" id="jJp-oJ-btr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mVr-Wn-GhC"/>
                     </view>
                     <connections>
-                        <outlet property="emptyView" destination="dGC-YH-gDo" id="fcn-Dv-xaa"/>
-                        <outlet property="loader" destination="aw5-kb-hn9" id="xzt-ba-rOW"/>
+                        <outlet property="loader" destination="NPy-Ez-H5k" id="jgj-yz-04G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byS-Z8-eyx" sceneMemberID="firstResponder"/>

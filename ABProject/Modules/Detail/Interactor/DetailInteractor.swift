@@ -21,6 +21,7 @@ class DetailInteractorImpl: DetailInteractor {
     
     func getWeatcher(city: String) -> Observable<[List]> {
         return globalProvider.getWeather(city: city)
+            .delay(1, scheduler: MainScheduler.instance)
     }
     
    

@@ -10,20 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    
+    @IBOutlet weak var loader: UILoadingView!
+    
     var presenter: DetailPresenter!
     
     var city: String?
 
-    @IBOutlet weak var emptyView: UILabel!
     
-    @IBOutlet weak var loader: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationController?.navigationBar.backItem?.title = "Anything Else"
-        
-        
-        
         presenter.viewDidLoad()
         presenter.loadWeather(city: city!)
     }
@@ -36,36 +34,21 @@ extension DetailViewController : DetailView{
     
     
     func showErrorScreen(error: String) {
-        loader?.isHidden = true
-        loader?.stopAnimating()
-        emptyView?.isHidden = false
-        emptyView?.text = error
+        loader.showError(value: error)
     }
     
     
-    
     func showNoContentScreen() {
-        loader?.isHidden = true
-        loader?.stopAnimating()
-        emptyView?.isHidden = false
-        emptyView?.text = "No data"
+        loader.showEmptyView()
     }
     
     
     func showLoading() {
-        loader?.isHidden = false
-        loader?.startAnimating()
-        emptyView?.isHidden = true
+        loader.showLoading()
     }
     
     func showResultScreen(result: [List]) {
-        loader?.isHidden = true
-        loader?.stopAnimating()
-        emptyView?.isHidden = false
-        
-        
-        //todo remove
-        emptyView?.text = "Count of results -> \(result.count)"
+        loader.showError(value: "Count of results -> \(result.count)")
     }
     
 

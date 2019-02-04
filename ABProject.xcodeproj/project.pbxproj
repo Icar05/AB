@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1AB9839622051C1700A75423 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9839522051C1700A75423 /* BaseContract.swift */; };
+		1AD5ABAB2208EE6700AD7F4B /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD5ABAA2208EE6700AD7F4B /* UILoadingView.swift */; };
+		1AD5ABAF2208F47100AD7F4B /* UILoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD5ABAE2208F47100AD7F4B /* UILoadingView.xib */; };
 		6F866A2627E3A79161C7A9DA /* Pods_ABProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F3F57E5ED3A5E2E8FD545F0 /* Pods_ABProject.framework */; };
 		9B3C9E32220081A300AE4C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3C9E31220081A300AE4C23 /* AppDelegate.swift */; };
 		9B3C9E39220081A500AE4C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3C9E38220081A500AE4C23 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		075717C7F5021F4293E864EE /* Pods-ABProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ABProject/Pods-ABProject.release.xcconfig"; sourceTree = "<group>"; };
 		1AB9839522051C1700A75423 /* BaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
+		1AD5ABAA2208EE6700AD7F4B /* UILoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILoadingView.swift; sourceTree = "<group>"; };
+		1AD5ABAE2208F47100AD7F4B /* UILoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILoadingView.xib; sourceTree = "<group>"; };
 		1F3F57E5ED3A5E2E8FD545F0 /* Pods_ABProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304DDC297A5614A8EC5F43BA /* Pods-ABProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABProject/Pods-ABProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9B3C9E2E220081A300AE4C23 /* ABProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,23 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		1AD5ABA32208CC3700AD7F4B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				1AD5ABA92208EE4300AD7F4B /* emptyView */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		1AD5ABA92208EE4300AD7F4B /* emptyView */ = {
+			isa = PBXGroup;
+			children = (
+				1AD5ABAA2208EE6700AD7F4B /* UILoadingView.swift */,
+				1AD5ABAE2208F47100AD7F4B /* UILoadingView.xib */,
+			);
+			path = emptyView;
+			sourceTree = "<group>";
+		};
 		67327F13B1C7F76E8C19C6F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +146,7 @@
 		9B3C9E30220081A300AE4C23 /* ABProject */ = {
 			isa = PBXGroup;
 			children = (
+				1AD5ABA32208CC3700AD7F4B /* Custom */,
 				9B3C9E38220081A500AE4C23 /* Assets.xcassets */,
 				9B3C9E452200827400AE4C23 /* Application */,
 				9B3C9E46220082E900AE4C23 /* Models */,
@@ -373,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD5ABAF2208F47100AD7F4B /* UILoadingView.xib in Resources */,
 				9B3C9E3C220081A500AE4C23 /* LaunchScreen.storyboard in Resources */,
 				9B69AD6B220192B600A8A187 /* M.storyboard in Resources */,
 				9B69AD6D220192EC00A8A187 /* Detail.storyboard in Resources */,
@@ -462,6 +485,7 @@
 				9B84DA9B220199C0000DF57A /* DetailPresenterImpl.swift in Sources */,
 				9B51D4FC22020A68003FCC62 /* Cloud.swift in Sources */,
 				9B51D50022020AA2003FCC62 /* Rain.swift in Sources */,
+				1AD5ABAB2208EE6700AD7F4B /* UILoadingView.swift in Sources */,
 				9B69AD71220196E200A8A187 /* MasterViewController.swift in Sources */,
 				9B51D50A22020B36003FCC62 /* List.swift in Sources */,
 				9B3C9E622200928900AE4C23 /* MasterInteractor.swift in Sources */,
