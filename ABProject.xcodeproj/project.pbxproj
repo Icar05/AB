@@ -40,7 +40,6 @@
 		9B84DA9B220199C0000DF57A /* DetailPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DA9A220199C0000DF57A /* DetailPresenterImpl.swift */; };
 		9B84DA9E22019A7A000DF57A /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DA9D22019A7A000DF57A /* DetailInteractor.swift */; };
 		9B84DAA222019AE5000DF57A /* DetailCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DAA122019AE5000DF57A /* DetailCreator.swift */; };
-		9B9BD69022099BA8006402A3 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9BD68F22099BA8006402A3 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +81,6 @@
 		9B84DA9A220199C0000DF57A /* DetailPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterImpl.swift; sourceTree = "<group>"; };
 		9B84DA9D22019A7A000DF57A /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		9B84DAA122019AE5000DF57A /* DetailCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreator.swift; sourceTree = "<group>"; };
-		9B9BD68F22099BA8006402A3 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = ../../test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +153,6 @@
 			children = (
 				1AD5ABA32208CC3700AD7F4B /* Custom */,
 				9B3C9E38220081A500AE4C23 /* Assets.xcassets */,
-				9B9BD68F22099BA8006402A3 /* test.png */,
 				9B3C9E452200827400AE4C23 /* Application */,
 				9B3C9E46220082E900AE4C23 /* Models */,
 				9B3C9E5E22008EF700AE4C23 /* Router */,
@@ -404,7 +401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD5ABAF2208F47100AD7F4B /* UILoadingView.xib in Resources */,
-				9B9BD69022099BA8006402A3 /* test.png in Resources */,
 				9B3C9E3C220081A500AE4C23 /* LaunchScreen.storyboard in Resources */,
 				9B69AD6B220192B600A8A187 /* M.storyboard in Resources */,
 				9B69AD6D220192EC00A8A187 /* Detail.storyboard in Resources */,
