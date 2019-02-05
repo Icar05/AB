@@ -24,7 +24,7 @@ class UIWeatherCellCollectionViewCell: UICollectionViewCell {
         iconLabel.text = item.weather[0].icon
         
         
-        self.layer.borderColor = UIColor.red.cgColor
+        self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 2.0
     }
     

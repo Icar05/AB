@@ -37,8 +37,8 @@ class DetailViewController: UIViewController {
     
     var camera: MKMapCamera?
     
-    let coordinate = CLLocationCoordinate2D(latitude: 12.8692,longitude: -85.1412)
-    
+    let coordinate = CLLocationCoordinate2D(latitude: 43.06417,longitude: 141.34695)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ extension DetailViewController : DetailView, UICollectionViewDataSource{
     
     
     func moveCamera(coordinate: CLLocationCoordinate2D){
-        map?.mapType = .satelliteFlyover
+        map?.mapType = .standard
         
         
         camera = MKMapCamera(lookingAtCenter: coordinate,

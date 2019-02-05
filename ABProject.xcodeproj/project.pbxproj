@@ -48,7 +48,6 @@
 		1AD5ABAA2208EE6700AD7F4B /* UILoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILoadingView.swift; sourceTree = "<group>"; };
 		1AD5ABAE2208F47100AD7F4B /* UILoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILoadingView.xib; sourceTree = "<group>"; };
 		1AD5ABB022090B8E00AD7F4B /* UIWeatherCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWeatherCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		1AD5ABB22209244A00AD7F4B /* icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = icon.svg; path = ../../../icon.svg; sourceTree = "<group>"; };
 		1F3F57E5ED3A5E2E8FD545F0 /* Pods_ABProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304DDC297A5614A8EC5F43BA /* Pods-ABProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABProject/Pods-ABProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9B3C9E2E220081A300AE4C23 /* ABProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +107,6 @@
 			children = (
 				1AD5ABA92208EE4300AD7F4B /* emptyView */,
 				1AD5ABB022090B8E00AD7F4B /* UIWeatherCellCollectionViewCell.swift */,
-				1AD5ABB22209244A00AD7F4B /* icon.svg */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
