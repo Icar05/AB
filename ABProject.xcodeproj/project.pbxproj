@@ -11,7 +11,6 @@
 		1AD5ABAB2208EE6700AD7F4B /* UILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD5ABAA2208EE6700AD7F4B /* UILoadingView.swift */; };
 		1AD5ABAF2208F47100AD7F4B /* UILoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD5ABAE2208F47100AD7F4B /* UILoadingView.xib */; };
 		1AD5ABB122090B8E00AD7F4B /* UIWeatherCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD5ABB022090B8E00AD7F4B /* UIWeatherCellCollectionViewCell.swift */; };
-		1AD5ABB32209244A00AD7F4B /* icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1AD5ABB22209244A00AD7F4B /* icon.svg */; };
 		6F866A2627E3A79161C7A9DA /* Pods_ABProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F3F57E5ED3A5E2E8FD545F0 /* Pods_ABProject.framework */; };
 		9B3C9E32220081A300AE4C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3C9E31220081A300AE4C23 /* AppDelegate.swift */; };
 		9B3C9E39220081A500AE4C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3C9E38220081A500AE4C23 /* Assets.xcassets */; };
@@ -41,6 +40,7 @@
 		9B84DA9B220199C0000DF57A /* DetailPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DA9A220199C0000DF57A /* DetailPresenterImpl.swift */; };
 		9B84DA9E22019A7A000DF57A /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DA9D22019A7A000DF57A /* DetailInteractor.swift */; };
 		9B84DAA222019AE5000DF57A /* DetailCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DAA122019AE5000DF57A /* DetailCreator.swift */; };
+		9B9BD69022099BA8006402A3 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9BD68F22099BA8006402A3 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +82,7 @@
 		9B84DA9A220199C0000DF57A /* DetailPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterImpl.swift; sourceTree = "<group>"; };
 		9B84DA9D22019A7A000DF57A /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		9B84DAA122019AE5000DF57A /* DetailCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreator.swift; sourceTree = "<group>"; };
+		9B9BD68F22099BA8006402A3 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = ../../test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +155,7 @@
 			children = (
 				1AD5ABA32208CC3700AD7F4B /* Custom */,
 				9B3C9E38220081A500AE4C23 /* Assets.xcassets */,
+				9B9BD68F22099BA8006402A3 /* test.png */,
 				9B3C9E452200827400AE4C23 /* Application */,
 				9B3C9E46220082E900AE4C23 /* Models */,
 				9B3C9E5E22008EF700AE4C23 /* Router */,
@@ -402,7 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD5ABAF2208F47100AD7F4B /* UILoadingView.xib in Resources */,
-				1AD5ABB32209244A00AD7F4B /* icon.svg in Resources */,
+				9B9BD69022099BA8006402A3 /* test.png in Resources */,
 				9B3C9E3C220081A500AE4C23 /* LaunchScreen.storyboard in Resources */,
 				9B69AD6B220192B600A8A187 /* M.storyboard in Resources */,
 				9B69AD6D220192EC00A8A187 /* Detail.storyboard in Resources */,
