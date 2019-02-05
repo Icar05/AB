@@ -18,16 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="33j-Jj-XL2">
-                                <rect key="frame" x="36" y="164.5" width="303" height="338"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="IBp-NY-wvJ">
+                                <rect key="frame" x="179.5" y="325.5" width="16" height="16"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="33j-Jj-XL2" secondAttribute="trailing" constant="20" id="Fw1-bK-EFv"/>
-                            <constraint firstItem="33j-Jj-XL2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Xhh-3c-ZOW"/>
-                            <constraint firstItem="33j-Jj-XL2" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="oKU-KT-ThL"/>
-                            <constraint firstItem="33j-Jj-XL2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qb0-0D-EiO"/>
+                            <constraint firstItem="IBp-NY-wvJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DaD-z0-NYi"/>
+                            <constraint firstItem="IBp-NY-wvJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cxf-ZM-gUV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="weather" width="338" height="338"/>
+        <image name="icon" width="16" height="16"/>
     </resources>
 </document>
