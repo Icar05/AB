@@ -22,6 +22,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.85987049339999999" green="0.82262307410000002" blue="0.60640555620000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i50-kZ-UI2">
+                                <rect key="frame" x="16" y="36" width="343" height="448.5"/>
+                            </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4d-1g-MVg">
                                 <rect key="frame" x="0.0" y="500.5" width="375" height="166.5"/>
                                 <color key="backgroundColor" red="0.1894687712" green="0.47458475830000002" blue="0.46769160030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,9 +92,13 @@
                         <constraints>
                             <constraint firstItem="t4d-1g-MVg" firstAttribute="bottom" secondItem="mVr-Wn-GhC" secondAttribute="bottom" id="52K-9x-4MK"/>
                             <constraint firstItem="vRc-ii-Qp3" firstAttribute="trailing" secondItem="mVr-Wn-GhC" secondAttribute="trailing" id="JX7-Dd-7sK"/>
+                            <constraint firstItem="i50-kZ-UI2" firstAttribute="leading" secondItem="mVr-Wn-GhC" secondAttribute="leading" constant="16" id="TEE-tv-oAj"/>
                             <constraint firstItem="t4d-1g-MVg" firstAttribute="leading" secondItem="mVr-Wn-GhC" secondAttribute="leading" id="Wmg-Qq-HA2"/>
+                            <constraint firstItem="t4d-1g-MVg" firstAttribute="top" secondItem="i50-kZ-UI2" secondAttribute="bottom" constant="16" id="ghg-C8-sbC"/>
+                            <constraint firstItem="mVr-Wn-GhC" firstAttribute="trailing" secondItem="i50-kZ-UI2" secondAttribute="trailing" constant="16" id="hJy-fE-0tP"/>
                             <constraint firstItem="vRc-ii-Qp3" firstAttribute="leading" secondItem="mVr-Wn-GhC" secondAttribute="leading" id="lNf-16-NGa"/>
                             <constraint firstItem="t4d-1g-MVg" firstAttribute="height" secondItem="vRc-ii-Qp3" secondAttribute="height" multiplier="0.25" id="mQb-HN-RVc"/>
+                            <constraint firstItem="i50-kZ-UI2" firstAttribute="top" secondItem="mVr-Wn-GhC" secondAttribute="top" constant="16" id="otT-Ez-y8o" userLabel="Map View.top = Safe Area.top "/>
                             <constraint firstItem="vRc-ii-Qp3" firstAttribute="top" secondItem="vzq-Gz-ErH" secondAttribute="top" id="pk9-F3-p26"/>
                             <constraint firstItem="vRc-ii-Qp3" firstAttribute="bottom" secondItem="mVr-Wn-GhC" secondAttribute="bottom" id="ueM-Zk-Zc0"/>
                             <constraint firstItem="t4d-1g-MVg" firstAttribute="trailing" secondItem="mVr-Wn-GhC" secondAttribute="trailing" id="vJ1-N7-3mq"/>
@@ -101,6 +108,7 @@
                     <connections>
                         <outlet property="collectionView" destination="t4d-1g-MVg" id="m8J-UF-cVD"/>
                         <outlet property="loader" destination="vRc-ii-Qp3" id="4CM-fL-cYT"/>
+                        <outlet property="map" destination="i50-kZ-UI2" id="VV5-Tk-haD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byS-Z8-eyx" sceneMemberID="firstResponder"/>

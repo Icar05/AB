@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailViewController: UIViewController {
     
     
     
+    @IBOutlet weak var map: MKMapView!
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -72,27 +74,31 @@ extension DetailViewController : DetailView, UICollectionViewDataSource{
     func showErrorScreen(error: String) {
         loader.showError(value: error)
         collectionView.isHidden = true
+        map?.isHidden = true
     }
     
     
     func showNoContentScreen() {
         loader.showEmptyView()
         collectionView.isHidden = true
+        map?.isHidden = true
     }
     
     
     func showLoading() {
         loader.showLoading()
         collectionView.isHidden = true
+        map?.isHidden = true
     }
     
     func showResultScreen(result: [List]) {
-        loader.showError(value: "Count of results -> \(result.count)")
+        loader.isHidden = true
         
         self.datasource = result
         collectionView.reloadData()
         
         collectionView.isHidden = false
+        map?.isHidden = false
     }
     
 
