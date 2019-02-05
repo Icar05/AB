@@ -20,7 +20,7 @@ class MasterViewController: UIViewController {
     @IBOutlet weak var searchCityTF: UITextField!
     
     @IBAction func goToDetail() {
-        Router.presentDetailScreen(current: self, city: (searchCityTF?.text)!)
+        Router.presentDetailScreen(current: self, city: (searchCityTF?.text)!.trimmingCharacters(in: .whitespacesAndNewlines))
     }
     
     @IBOutlet weak var searchbtn: UIButton!

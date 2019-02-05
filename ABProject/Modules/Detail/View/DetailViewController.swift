@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import GLKit
 
 class DetailViewController: UIViewController {
     
@@ -28,8 +29,15 @@ class DetailViewController: UIViewController {
     
     let indifier = "collectionCell"
     
+    let distance: CLLocationDistance = 650
     
+    let pitch: CGFloat = 65
     
+    let heading = 0.0
+    
+    var camera: MKMapCamera?
+    
+    let coordinate = CLLocationCoordinate2D(latitude: 12.8692,longitude: -85.1412)
     
     
     override func viewDidLoad() {
@@ -37,6 +45,7 @@ class DetailViewController: UIViewController {
         presenter.viewDidLoad()
         presenter.loadWeather(city: city!)
         collectionView.dataSource = self
+        moveCamera(coordinate: coordinate)
     }
     
 
@@ -46,8 +55,21 @@ extension DetailViewController : DetailView, UICollectionViewDataSource{
     
     
     
+    func moveCamera(coordinate: CLLocationCoordinate2D){
+        map?.mapType = .satelliteFlyover
+        
+        
+        camera = MKMapCamera(lookingAtCenter: coordinate,
+                             fromDistance: distance,
+                             pitch: pitch,
+                             heading: heading)
+        
+        map?.camera = camera!
+    }
     
     
+    
+   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return datasource.count
@@ -56,18 +78,16 @@ extension DetailViewController : DetailView, UICollectionViewDataSource{
 //    func collectionView(_ collectionView: UICollectionView,
 //                        layout collectionViewLayout: UICollectionViewLayout,
 //                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    
+//
 //        return CGSize(width: collectionView.bounds.size.width, height:       CGFloat(collectionView.bounds.size.height))
 //    }
     
-      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: indifier , for: indexPath) as! UIWeatherCellCollectionViewCell
-        
             cell.createCell(item: datasource[indexPath.row])
-        
             return cell
-        
     }
     
     
