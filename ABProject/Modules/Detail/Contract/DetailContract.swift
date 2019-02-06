@@ -7,13 +7,12 @@
 //
 
 import Foundation
-import UIKit
+
 import RxSwift
+import MapKit
 
 protocol DetailCreator: class {
     var viewController: UIViewController? { get set }
-    
-    func printModel(model: RootClass)
     
     static func assembleModule() -> UIViewController
 }
@@ -21,15 +20,17 @@ protocol DetailCreator: class {
 protocol DetailPresenter: class {
     var view: DetailView? { get set }
     var interactor: DetailInteractor! { get set }
-    var creator: DetailCreator! { get set }
     
+    func getLocationByCityName(city: String)
     func loadWeather(city: String)
     func viewDidLoad()
 }
 
 protocol DetailInteractor: class {
-    var globalProvider: GlobalProvider! {get set}
+    var  globalProvider: GlobalProvider! {get set}
+    var  locationUtil: LocationUtil! {get set}
     func getWeatcher(city: String) -> Observable<[List]>
+    func getLocationByCityName(city: String) -> Observable<CLLocationCoordinate2D>
 }
 
 protocol DetailView: class {
@@ -39,5 +40,7 @@ protocol DetailView: class {
     func showLoading()
     func showErrorScreen(error: String)
     func showResultScreen(result: [List])
+    func showLocationOnMap(location: CLLocationCoordinate2D)
+    func showErrorLocation(value: String)
     
 }

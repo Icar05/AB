@@ -8,14 +8,18 @@
 
 import Foundation
 import RxSwift
+import MapKit
 
 class DetailInteractorImpl: DetailInteractor {
     
     
-    var globalProvider: GlobalProvider!
     
-    init(provider: GlobalProvider!){
+    var globalProvider: GlobalProvider!
+    var locationUtil: LocationUtil!
+    
+    init(provider: GlobalProvider!, lUtil: LocationUtil!){
         self.globalProvider = provider
+        self.locationUtil = lUtil
     }
     
     
@@ -24,5 +28,8 @@ class DetailInteractorImpl: DetailInteractor {
             .delay(1, scheduler: MainScheduler.instance)
     }
     
+    func getLocationByCityName(city: String) -> Observable<CLLocationCoordinate2D> {
+        return locationUtil.getLocationByCityName(city: city)
+    }
    
 }

@@ -40,6 +40,7 @@
 		9B84DA9B220199C0000DF57A /* DetailPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DA9A220199C0000DF57A /* DetailPresenterImpl.swift */; };
 		9B84DA9E22019A7A000DF57A /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DA9D22019A7A000DF57A /* DetailInteractor.swift */; };
 		9B84DAA222019AE5000DF57A /* DetailCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84DAA122019AE5000DF57A /* DetailCreator.swift */; };
+		9BCDF7B1220AC824000B02A7 /* LocationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDF7B0220AC824000B02A7 /* LocationUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		9B84DA9A220199C0000DF57A /* DetailPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterImpl.swift; sourceTree = "<group>"; };
 		9B84DA9D22019A7A000DF57A /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		9B84DAA122019AE5000DF57A /* DetailCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreator.swift; sourceTree = "<group>"; };
+		9BCDF7B0220AC824000B02A7 /* LocationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				9B51D4F52201E4FC003FCC62 /* GlobalProvider.swift */,
+				9BCDF7B0220AC824000B02A7 /* LocationUtil.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				9B51D4F62201E4FC003FCC62 /* GlobalProvider.swift in Sources */,
 				9B51D50822020B14003FCC62 /* Wind.swift in Sources */,
 				9B51D4FA22020A40003FCC62 /* City.swift in Sources */,
+				9BCDF7B1220AC824000B02A7 /* LocationUtil.swift in Sources */,
 				9B84DA9B220199C0000DF57A /* DetailPresenterImpl.swift in Sources */,
 				9B51D4FC22020A68003FCC62 /* Cloud.swift in Sources */,
 				9B51D50022020AA2003FCC62 /* Rain.swift in Sources */,

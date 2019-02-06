@@ -32,8 +32,9 @@ class DetailCreatorImpl: BaseCreator {
         let view = getSelfUIViewController() as! DetailViewController
         
         let globalProvider: GlobalProvider  = GlobalProvider()
+        let locationUtil: LocationUtil = LocationUtil()
         let presenter = DetailPresenterImpl()
-        let interactor = DetailInteractorImpl(provider: globalProvider)
+        let interactor = DetailInteractorImpl(provider: globalProvider,  lUtil: locationUtil)
     
         view.presenter = presenter
         

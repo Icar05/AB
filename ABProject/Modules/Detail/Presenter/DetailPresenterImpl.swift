@@ -8,38 +8,66 @@
 
 import Foundation
 import RxSwift
+import MapKit
 
 class DetailPresenterImpl: DetailPresenter{
   
+    
+
     
     weak var view: DetailView?
     
     var interactor: DetailInteractor!
     
-    var creator: DetailCreator!
-    
     private var disposeBag = DisposeBag()
+    
+    
+    
     
     
     func viewDidLoad() {
       
     }
     
+    /*
+        getLocation from city name
+     */
+    func getLocationByCityName(city: String) {
+        interactor.getLocationByCityName(city: city)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { (n) in
+                print("getLocationByCity -> onNext")
+                self.view?.showLocationOnMap(location: n)
+            }, onError: { (error) in
+                print("getLocationByCity -> onError while get location -> \(error.localizedDescription)")
+                self.view?.showErrorLocation(value: error.localizedDescription)
+            }, onCompleted: {
+                print("getLocationByCity -> onCompleted")
+            }, onDisposed: {
+                print("getLocationByCity -> onDisposed")
+            }).disposed(by: disposeBag)
+    }
+    
+    
+    
+    /*
+      get weather data by city name
+    */
     func loadWeather(city: String) {
         view?.showLoading()
         interactor.getWeatcher(city: city)
             .observeOn(MainScheduler.instance)
             .subscribe(
                 onNext: { (n) in
-                print("onNext")
+                print("loadWeather -> onNext")
                 self.view?.showResultScreen(result: n)
-
             }, onError: { (error) in
                 self.view?.showErrorScreen(error: error.localizedDescription)
             }, onCompleted: {
-                print("onCompleted")
+                print("loadWeather -> onCompleted")
             }, onDisposed: {
-                print("onDisposed")
+                print("loadWeather -> onDisposed")
             }).disposed(by: disposeBag)
     }
     

@@ -22,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет данных" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-JX-Yl5">
-                    <rect key="frame" x="132.5" y="321.5" width="110" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет данных" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-JX-Yl5">
+                    <rect key="frame" x="20" y="321.5" width="335" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                     <color key="textColor" red="0.10426435370000001" green="0.4301732513" blue="0.25031856870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -45,6 +45,8 @@
                 <constraint firstItem="HhC-6w-vXC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eBq-s4-9ZT"/>
                 <constraint firstItem="4lM-JX-Yl5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="g7N-hQ-Gbm"/>
                 <constraint firstItem="HhC-6w-vXC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="j5a-x3-SVn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4lM-JX-Yl5" secondAttribute="trailing" constant="20" id="tmO-1K-QUN"/>
+                <constraint firstItem="4lM-JX-Yl5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wjn-YA-sa7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

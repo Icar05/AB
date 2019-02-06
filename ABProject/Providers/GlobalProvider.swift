@@ -41,12 +41,18 @@ class GlobalProvider{
                                                 observer.onError(er)
                                           }
                                     }else{
-                                        let error : NSError = NSError(domain: "GlobalProvider",code: -1,userInfo: [NSLocalizedDescriptionKey:"error while serialization"])
+                                        let error : NSError = NSError(
+                                            domain: "GlobalProvider",
+                                            code: -1,
+                                            userInfo: [NSLocalizedDescriptionKey:"error while serialization"])
                                         
                                             observer.onError(error)
                                     }
                                 } else{
-                                        let error : NSError = NSError(domain: "GlobalProvider",code: -1,userInfo: [NSLocalizedDescriptionKey:"Responce return nil"])
+                                        let error : NSError = NSError(
+                                            domain: "GlobalProvider",
+                                            code: -1,
+                                            userInfo: [NSLocalizedDescriptionKey:"Под данному запросу нету информации"])
                                 
                                             observer.onError(error)
                                 }

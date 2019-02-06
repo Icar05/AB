@@ -10,12 +10,12 @@ import UIKit
 import MapKit
 import GLKit
 
+
 class DetailViewController: UIViewController {
     
     
     
     @IBOutlet weak var map: MKMapView!
-    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -29,47 +29,39 @@ class DetailViewController: UIViewController {
     
     let indifier = "collectionCell"
     
-    let distance: CLLocationDistance = 650
-    
-    let pitch: CGFloat = 65
-    
-    let heading = 0.0
-    
-    var camera: MKMapCamera?
-    
-    let coordinate = CLLocationCoordinate2D(latitude: 43.06417,longitude: 141.34695)
+
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
         presenter.loadWeather(city: city!)
+        presenter.getLocationByCityName(city: city!)
         collectionView.dataSource = self
-        moveCamera(coordinate: coordinate)
     }
     
-
 }
 
 extension DetailViewController : DetailView, UICollectionViewDataSource{
     
     
     
-    func moveCamera(coordinate: CLLocationCoordinate2D){
-        map?.mapType = .standard
-        
-        
-        camera = MKMapCamera(lookingAtCenter: coordinate,
-                             fromDistance: distance,
-                             pitch: pitch,
-                             heading: heading)
-        
-        map?.camera = camera!
+    func showLocationOnMap(location: CLLocationCoordinate2D) {
+        showMarker(location: location)
+        print("get location ->  \(location.latitude) - \(location.longitude)")
     }
     
+    func showErrorLocation(value: String) {
+        
+        let actionSheet  = UIAlertController(title: "Ошибка определения локации", message: "Ну удалось найти координаты \(city!)", preferredStyle: .actionSheet)
+        
+            actionSheet.addAction(UIAlertAction(title: "Ok" , style: .cancel, handler: {_ in
+                self.navigationController?.popViewController(animated: true)
+            }))
+        
+        self.present(actionSheet, animated: true, completion: nil)
+    }
     
-    
-   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return datasource.count
@@ -113,14 +105,34 @@ extension DetailViewController : DetailView, UICollectionViewDataSource{
     
     func showResultScreen(result: [List]) {
         loader.isHidden = true
-        
-        self.datasource = result
+        datasource = result
         collectionView.reloadData()
-        
         collectionView.isHidden = false
         map?.isHidden = false
     }
     
+    
+    func showMarker(location: CLLocationCoordinate2D){
 
+        let annotations = self.map?.annotations
+        self.map?.removeAnnotations(annotations!)
+        
+
+        //anotation (pin)
+        let annotation = MKPointAnnotation()
+            annotation.title = city!
+            annotation.subtitle = "Вы искали \(city!)"
+            annotation.coordinate = location
+        
+        
+        self.map?.addAnnotation(annotation)
+        
+        
+        //zooming
+        let span = MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)
+        let region = MKCoordinateRegion(center: location,span: span)
+        
+        self.map?.setRegion(region, animated: true)
+    }
     
 }
