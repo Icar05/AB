@@ -38,11 +38,12 @@ class DetailViewController: UIViewController {
         presenter.loadWeather(city: city!)
         presenter.getLocationByCityName(city: city!)
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
 }
 
-extension DetailViewController : DetailView, UICollectionViewDataSource{
+extension DetailViewController : DetailView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
     
@@ -67,12 +68,12 @@ extension DetailViewController : DetailView, UICollectionViewDataSource{
         return datasource.count
     }
     
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        return CGSize(width: collectionView.bounds.size.width, height:       CGFloat(collectionView.bounds.size.height))
-//    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        return CGSize(width: collectionView.bounds.size.width, height:       CGFloat(collectionView.bounds.size.height))
+    }
     
     
     
