@@ -9,6 +9,4 @@
 import Foundation
 import RxSwift
 
-class MasterInteratorImpl: MasterInteractor {
-    
-}
+class MasterInteratorImpl: MasterInteractor {}

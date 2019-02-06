@@ -13,7 +13,7 @@ import MapKit
 
 protocol DetailCreator: class {
     var viewController: UIViewController? { get set }
-    
+
     static func assembleModule() -> UIViewController
 }
 

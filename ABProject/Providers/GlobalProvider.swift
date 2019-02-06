@@ -14,13 +14,16 @@ class GlobalProvider{
     
     
     
-    let keyList = "list"
+    
     
     
 
     func getWeather(city: String) -> Observable<[List]> {
         
         return Observable<[List]>.create { observer -> Disposable in
+            
+            let keyList = "list"
+            
             let request = Alamofire
                         .request(self.getUrl(city: city))
                         .validate()
@@ -28,7 +31,7 @@ class GlobalProvider{
                             
                             let value:  [String:Any]?  = response.result.value as? [String:Any]
                     
-                                if let listValues =  value?[self.keyList] {
+                                if let listValues =  value?[keyList] {
                       
                                     let decoder = JSONDecoder()
                         

@@ -18,9 +18,7 @@ class MasterPresenterImpl: MasterPresenter {
     
     
 
-    func onViewDidLoad() {
-        
-    }
+    func onViewDidLoad() {}
     
 
     

@@ -15,7 +15,11 @@ class DetailInteractorImpl: DetailInteractor {
     
     
     var globalProvider: GlobalProvider!
+    
     var locationUtil: LocationUtil!
+    
+    
+    
     
     init(provider: GlobalProvider!, lUtil: LocationUtil!){
         self.globalProvider = provider

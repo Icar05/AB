@@ -25,9 +25,7 @@ class DetailPresenterImpl: DetailPresenter{
     
     
     
-    func viewDidLoad() {
-      
-    }
+    func viewDidLoad() {}
     
     /*
         getLocation from city name

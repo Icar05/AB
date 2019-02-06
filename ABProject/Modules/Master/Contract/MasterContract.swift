@@ -15,9 +15,7 @@ protocol MasterPresenter: class {
     func onViewDidLoad()
 }
 
-protocol MasterInteractor: class {
-    
-}
+protocol MasterInteractor: class {}
 
 protocol MasterView: class {
     var presenter: MasterPresenter! { get set }

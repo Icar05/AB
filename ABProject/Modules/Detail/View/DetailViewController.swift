@@ -72,7 +72,7 @@ extension DetailViewController : DetailView, UICollectionViewDataSource, UIColle
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: collectionView.bounds.size.width, height:       CGFloat(collectionView.bounds.size.height))
+        return CGSize(width: collectionView.bounds.size.width, height:CGFloat(collectionView.bounds.size.height))
     }
     
     
