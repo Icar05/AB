@@ -17,11 +17,13 @@ class UIWeatherCellCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var weatherIcon: UIImageView!
     
+    @IBOutlet weak var humidrity: UILabel!
     
     func createCell(item: List){
         descLabel.text = item.weather[0].main
         timeLabel.text =  getDate(input: item.dt)
         weatherIcon.image = UIImage(named: item.weather[0].icon)
+        humidrity.text = String(item.main.humidity)
         
         
         self.layer.borderColor = UIColor.white.cgColor
