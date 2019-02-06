@@ -13,15 +13,15 @@ class UIWeatherCellCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var descLabel: UILabel!
     
-    
-    @IBOutlet weak var iconLabel: UILabel!
-    
     @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var weatherIcon: UIImageView!
+    
     
     func createCell(item: List){
         descLabel.text = item.weather[0].main
         timeLabel.text =  getDate(input: item.dt)
-        iconLabel.text = item.weather[0].icon
+        weatherIcon.image = UIImage(named: item.weather[0].icon)
         
         
         self.layer.borderColor = UIColor.white.cgColor
@@ -34,7 +34,7 @@ class UIWeatherCellCollectionViewCell: UICollectionViewCell {
         let date = NSDate(timeIntervalSince1970: Double(input!))
         
         let dayTimePeriodFormatter = DateFormatter()
-        dayTimePeriodFormatter.dateFormat = "dd MMM YYYY hh:mm:SS"
+            dayTimePeriodFormatter.dateFormat = "dd MMM YYYY hh:mm:SS"
         
         let dateString = dayTimePeriodFormatter.string(from: date as Date)
         

@@ -57,32 +57,28 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwy-9J-OWY">
-                                                    <rect key="frame" x="214" y="20" width="89" height="40"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdF-6I-AiE">
+                                                    <rect key="frame" x="295" y="12" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="89" id="DB7-2D-oig"/>
+                                                        <constraint firstAttribute="width" constant="50" id="9gf-we-tPj"/>
+                                                        <constraint firstAttribute="height" constant="50" id="yLK-Sx-DRt"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="rwy-9J-OWY" secondAttribute="bottom" constant="74" id="3hg-HG-JWE"/>
+                                            <constraint firstItem="hdF-6I-AiE" firstAttribute="top" secondItem="Ki1-gW-oUQ" secondAttribute="top" constant="12" id="4eE-Tt-5HE"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="dkm-dY-Aoa" secondAttribute="bottom" constant="12" id="Dx3-6h-HVr"/>
+                                            <constraint firstAttribute="trailing" secondItem="hdF-6I-AiE" secondAttribute="trailing" constant="30" id="RJj-ec-4qo"/>
                                             <constraint firstItem="EG0-JV-9tt" firstAttribute="top" secondItem="Ki1-gW-oUQ" secondAttribute="topMargin" constant="-4" id="RcV-6F-FJ5"/>
-                                            <constraint firstItem="EG0-JV-9tt" firstAttribute="leading" secondItem="Ki1-gW-oUQ" secondAttribute="leadingMargin" constant="12" id="WLZ-Pd-SWh"/>
+                                            <constraint firstItem="EG0-JV-9tt" firstAttribute="leading" secondItem="Ki1-gW-oUQ" secondAttribute="leadingMargin" constant="4" id="WLZ-Pd-SWh"/>
                                             <constraint firstItem="EG0-JV-9tt" firstAttribute="leading" secondItem="dkm-dY-Aoa" secondAttribute="leading" id="fN4-yF-Zd8"/>
                                             <constraint firstItem="dkm-dY-Aoa" firstAttribute="top" secondItem="EG0-JV-9tt" secondAttribute="bottom" constant="18" id="mas-Y7-1VB"/>
-                                            <constraint firstItem="rwy-9J-OWY" firstAttribute="top" secondItem="Ki1-gW-oUQ" secondAttribute="topMargin" constant="12" id="nMA-Yg-Knh"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="rwy-9J-OWY" secondAttribute="trailing" constant="12" id="p5m-EO-c2X"/>
-                                            <constraint firstItem="rwy-9J-OWY" firstAttribute="leading" secondItem="EG0-JV-9tt" secondAttribute="trailing" constant="56" id="vDD-2f-24k"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="descLabel" destination="EG0-JV-9tt" id="5IX-1A-4aW"/>
-                                            <outlet property="iconLabel" destination="rwy-9J-OWY" id="rsK-74-xqd"/>
                                             <outlet property="timeLabel" destination="dkm-dY-Aoa" id="fSw-Mv-0ya"/>
+                                            <outlet property="weatherIcon" destination="hdF-6I-AiE" id="9Eu-eY-dfJ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
