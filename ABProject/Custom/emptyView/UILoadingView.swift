@@ -19,7 +19,7 @@ class UILoadingView: UIView {
     
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
-    
+//    @IBInspectable var color: UIColor = UIColor.orange
     
     
     
@@ -59,12 +59,17 @@ class UILoadingView: UIView {
     
     func setup() {
         
-        Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)
+        let bundle = Bundle(for: UILoadingView.self)
+        bundle.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask =
             [UIView.AutoresizingMask.flexibleWidth,
              UIView.AutoresizingMask.flexibleHeight]
+        
+        
+//        label.textColor = color
+//        loading.color = color
     }
 
 }
