@@ -7,9 +7,9 @@ target 'ABProject' do
 
   # Pods for ABProject
 
-    pod 'RxSwift',    '~> 4.0'
-    pod 'RxCocoa',    '~> 4.0'
-    pod 'Alamofire',  '~> 4.7'
+#    pod 'RxSwift',    '~> 4.0'
+#    pod 'RxCocoa',    '~> 4.0'
+#    pod 'Alamofire',  '~> 4.7'
     # pod 'AlamofireObjectMapper', '~> 5.2'
 
 end
