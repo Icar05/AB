@@ -19,8 +19,6 @@ class UILoadingView: UIView {
     
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
-//    @IBInspectable var color: UIColor = UIColor.orange
-    
     
     
     

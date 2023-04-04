@@ -23,13 +23,15 @@ protocol DetailPresenter: AnyObject {
     
     func getLocationByCityName(city: String)
     func loadWeather(city: String)
+    func loadWeather(coords: CLLocationCoordinate2D)
     func viewDidLoad()
 }
 
 protocol DetailInteractor: AnyObject {
     var  globalProvider: GlobalProvider! {get set}
     var  locationUtil: LocationUtil! {get set}
-    func getWeatcher(city: String) -> Observable<[List]>
+    func getWeatcher(city: String) -> Observable<WeatherResponce>
+    func getWeatcher(coords: CLLocationCoordinate2D) -> Observable<List>
     func getLocationByCityName(city: String) -> Observable<CLLocationCoordinate2D>
 }
 

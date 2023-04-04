@@ -18,15 +18,9 @@ public struct WeatherResponce: Codable{
 
 //MARK: - List
 public struct List: Codable{
-    
-    public var clouds : Cloud!
     public var dt : Int!
-    public var dtTxt : String!
     public var main : Main!
-    public var rain : Rain!
-    public var snow : Snow!
-    public var sys : Sy!
     public var weather : [Weather]!
     public var wind : Wind!
-    
+    public var name: String?
 }

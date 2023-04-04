@@ -27,7 +27,12 @@ class DetailInteractorImpl: DetailInteractor {
     }
     
     
-    func getWeatcher(city: String) -> Observable<[List]> {
+    func getWeatcher(coords: CLLocationCoordinate2D) -> Observable<List> {
+        return globalProvider.getWeather(coords: coords)
+            .delay(.milliseconds(100), scheduler: MainScheduler.instance)
+    }
+    
+    func getWeatcher(city: String) -> Observable<WeatherResponce> {
         return globalProvider.getWeather(city: city)
             .delay(.milliseconds(100), scheduler: MainScheduler.instance)
     }

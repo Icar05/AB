@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,10 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRc-ii-Qp3" customClass="UILoadingView" customModule="ABProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.85987049339999999" green="0.82262307410000002" blue="0.60640555620000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i50-kZ-UI2">
                                 <rect key="frame" x="16" y="36" width="343" height="448.5"/>
                             </mapView>
@@ -43,7 +37,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EG0-JV-9tt">
-                                                    <rect key="frame" x="12" y="4" width="138" height="69"/>
+                                                    <rect key="frame" x="20" y="4" width="138" height="69"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="138" id="7cP-73-jHU"/>
                                                     </constraints>
@@ -51,7 +45,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkm-dY-Aoa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkm-dY-Aoa">
                                                     <rect key="frame" x="20" y="91" width="283" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="IlE-rN-bXQ"/>
@@ -106,7 +100,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRc-ii-Qp3" customClass="UILoadingView" customModule="ABProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="mVr-Wn-GhC"/>
                         <color key="backgroundColor" red="0.85987049339999999" green="0.82262307410000002" blue="0.60640555620000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="t4d-1g-MVg" firstAttribute="bottom" secondItem="mVr-Wn-GhC" secondAttribute="bottom" id="52K-9x-4MK"/>
@@ -122,7 +121,6 @@
                             <constraint firstItem="vRc-ii-Qp3" firstAttribute="bottom" secondItem="mVr-Wn-GhC" secondAttribute="bottom" id="ueM-Zk-Zc0"/>
                             <constraint firstItem="t4d-1g-MVg" firstAttribute="trailing" secondItem="mVr-Wn-GhC" secondAttribute="trailing" id="vJ1-N7-3mq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="mVr-Wn-GhC"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="t4d-1g-MVg" id="m8J-UF-cVD"/>

@@ -10,10 +10,6 @@ import Foundation
 
 //MARK: - Weather
 public struct Weather : Codable{
-    
-    public var descriptionField : String!
     public var icon : String!
-    public var id : Int!
     public var main : String!
-    
 }

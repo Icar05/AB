@@ -15,6 +15,8 @@ class DetailViewController: UIViewController {
     
     
     
+    private var annotation = MKPointAnnotation()
+    
     private let geoCoder = CLGeocoder()
     
     @IBOutlet weak var map: MKMapView!
@@ -36,6 +38,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = city
         
         presenter.viewDidLoad()
         presenter.loadWeather(city: city!)
@@ -64,6 +68,7 @@ class DetailViewController: UIViewController {
             
             self.getLocationName(location: coordinate, callback: {
                 self.showMarker(location: coordinate, title: $0)
+                self.presenter.loadWeather(coords: coordinate)
             })
             
             
@@ -143,11 +148,10 @@ extension DetailViewController: DetailView{
     func showMarker(location: CLLocationCoordinate2D, title: String){
         
         self.map?.removeAnnotations(self.map?.annotations ?? [])
-        
-        let annotation = MKPointAnnotation()
-            annotation.title = title
-            annotation.subtitle = "Место: \(title)"
-            annotation.coordinate = location
+
+        self.annotation.title = title
+        self.annotation.subtitle = "Место: \(title)"
+        self.annotation.coordinate = location
         
         self.map?.addAnnotation(annotation)
     }
@@ -168,18 +172,20 @@ extension DetailViewController: DetailView{
     
     func showNoContentScreen() {
         loader.showEmptyView()
-        collectionView.isHidden = true
-        map?.isHidden = true
     }
     
     
     func showLoading() {
         loader.showLoading()
-        collectionView.isHidden = true
-        map?.isHidden = true
     }
     
     func showResultScreen(result: [List]) {
+        
+        if let name = result.first?.name {
+            annotation.title = name
+            title = name
+        }
+        
         loader.isHidden = true
         datasource = result
         collectionView.reloadData()

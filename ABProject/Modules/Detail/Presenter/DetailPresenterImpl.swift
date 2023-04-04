@@ -57,8 +57,26 @@ class DetailPresenterImpl: DetailPresenter{
         interactor.getWeatcher(city: city)
             .observe(on: MainScheduler.instance)
             .subscribe(
-                onNext: { (n) in
-                self.view?.showResultScreen(result: n)
+                onNext: { (result) in
+                self.view?.showResultScreen(result: result.list)
+            }, onError: { (error) in
+                self.view?.showErrorScreen(error: error.localizedDescription)
+            }, onCompleted: {
+            }, onDisposed: {
+            }).disposed(by: disposeBag)
+    }
+    
+    
+    /*
+      get weather data by city name
+    */
+    func loadWeather(coords: CLLocationCoordinate2D) {
+        view?.showLoading()
+        interactor.getWeatcher(coords: coords)
+            .observe(on: MainScheduler.instance)
+            .subscribe(
+                onNext: { (result) in
+                self.view?.showResultScreen(result: [result])
             }, onError: { (error) in
                 self.view?.showErrorScreen(error: error.localizedDescription)
             }, onCompleted: {
