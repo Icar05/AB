@@ -8,6 +8,14 @@
 
 import Foundation
 
+
+public struct WeatherResponce: Codable{
+    let cod: String
+    let message: Int
+    let cnt: Int
+    let list: [List]
+}
+
 //MARK: - List
 public struct List: Codable{
     

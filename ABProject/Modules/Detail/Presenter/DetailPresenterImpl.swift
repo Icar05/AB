@@ -32,7 +32,7 @@ class DetailPresenterImpl: DetailPresenter{
      */
     func getLocationByCityName(city: String) {
         interactor.getLocationByCityName(city: city)
-            .observeOn(MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { (n) in
                 print("getLocationByCity -> onNext")
@@ -55,7 +55,7 @@ class DetailPresenterImpl: DetailPresenter{
     func loadWeather(city: String) {
         view?.showLoading()
         interactor.getWeatcher(city: city)
-            .observeOn(MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { (n) in
                 print("loadWeather -> onNext")

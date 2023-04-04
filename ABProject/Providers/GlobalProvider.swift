@@ -13,7 +13,7 @@ import Alamofire
 class GlobalProvider{
     
     
-    
+    private let decoder = JSONDecoder()
     
     
     
@@ -24,42 +24,68 @@ class GlobalProvider{
             
             let keyList = "list"
             
-            let request = Alamofire
+            let request = AF
                         .request(self.getUrl(city: city))
                         .validate()
                         .responseJSON { response in
                             
-                            let value:  [String:Any]?  = response.result.value as? [String:Any]
-                    
-                                if let listValues =  value?[keyList] {
-                      
-                                    let decoder = JSONDecoder()
-                        
-                                    if let data = try? JSONSerialization.data(withJSONObject: listValues as Any , options:[]){
-                                        do{
-                                            let content:[List] = try decoder.decode([List].self, from: data)
-                                                observer.onNext(content)
-                                                observer.onCompleted()
-                                          }catch let er as NSError{
-                                                observer.onError(er)
-                                          }
-                                    }else{
-                                        let error : NSError = NSError(
-                                            domain: "GlobalProvider",
-                                            code: -1,
-                                            userInfo: [NSLocalizedDescriptionKey:"error while serialization"])
-                                        
-                                            observer.onError(error)
-                                    }
-                                } else{
-                                        let error : NSError = NSError(
-                                            domain: "GlobalProvider",
-                                            code: -1,
-                                            userInfo: [NSLocalizedDescriptionKey:"Под данному запросу нету информации"])
+                            switch response.result {
+                            case .success(_):
                                 
-                                            observer.onError(error)
+                                if let data = response.data {
+                                    do {
+                                        
+                                        print("daa: \(String(data: data, encoding: .utf8))")
+                                        
+                                        let result =  try self.decoder.decode(WeatherResponce.self, from: data)
+                                        observer.onNext(result.list)
+                                        observer.onCompleted()
+                                    } catch {
+                                        observer.onError(error)
+                                    }
+                                }else{
+                                    let error : NSError = NSError(
+                                        domain: "GlobalProvider",
+                                        code: -1,
+                                        userInfo: [NSLocalizedDescriptionKey:"Empty data from server"]
+                                    )
+                    
+                                        observer.onError(error)
                                 }
+                                
+                            case .failure(let error):
+                                observer.onError(error)
+                            }
+                        
                             
+                            
+                            
+                            
+                    
+//                                if let listValues =  value?[keyList] {
+//
+//
+//
+//                                    if let data = try? JSONSerialization.data(withJSONObject: listValues as Any , options:[]){
+//                                        do{
+//                                            let content:[List] = try decoder.decode([List].self, from: data)
+//                                                observer.onNext(content)
+//                                                observer.onCompleted()
+//                                          }catch let er as NSError{
+//                                                observer.onError(er)
+//                                          }
+//                                    }else{
+//
+//                                    }
+//                                } else{
+//                                        let error : NSError = NSError(
+//                                            domain: "GlobalProvider",
+//                                            code: -1,
+//                                            userInfo: [NSLocalizedDescriptionKey:"Под данному запросу нету информации"])
+//
+//                                            observer.onError(error)
+//                                }
+//
                         }
      
             

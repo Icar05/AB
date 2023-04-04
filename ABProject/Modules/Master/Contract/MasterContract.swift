@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-protocol MasterPresenter: class {
+protocol MasterPresenter: AnyObject {
     var view: MasterView? { get set }
     var interactor: MasterInteractor! { get set }
     func onViewDidLoad()
 }
 
-protocol MasterInteractor: class {}
+protocol MasterInteractor: AnyObject {}
 
-protocol MasterView: class {
+protocol MasterView: AnyObject {
     var presenter: MasterPresenter! { get set }
 }
 

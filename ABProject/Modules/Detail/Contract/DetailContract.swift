@@ -11,13 +11,13 @@ import Foundation
 import RxSwift
 import MapKit
 
-protocol DetailCreator: class {
+protocol DetailCreator: AnyObject {
     var viewController: UIViewController? { get set }
 
     static func assembleModule() -> UIViewController
 }
 
-protocol DetailPresenter: class {
+protocol DetailPresenter: AnyObject {
     var view: DetailView? { get set }
     var interactor: DetailInteractor! { get set }
     
@@ -26,14 +26,14 @@ protocol DetailPresenter: class {
     func viewDidLoad()
 }
 
-protocol DetailInteractor: class {
+protocol DetailInteractor: AnyObject {
     var  globalProvider: GlobalProvider! {get set}
     var  locationUtil: LocationUtil! {get set}
     func getWeatcher(city: String) -> Observable<[List]>
     func getLocationByCityName(city: String) -> Observable<CLLocationCoordinate2D>
 }
 
-protocol DetailView: class {
+protocol DetailView: AnyObject {
     var presenter: DetailPresenter! { get set }
     
     func showNoContentScreen()
