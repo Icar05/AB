@@ -34,9 +34,6 @@ class GlobalProvider{
                                 
                                 if let data = response.data {
                                     do {
-                                        
-                                        print("daa: \(String(data: data, encoding: .utf8))")
-                                        
                                         let result =  try self.decoder.decode(WeatherResponce.self, from: data)
                                         observer.onNext(result.list)
                                         observer.onCompleted()

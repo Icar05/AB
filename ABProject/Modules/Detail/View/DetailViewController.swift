@@ -15,6 +15,8 @@ class DetailViewController: UIViewController {
     
     
     
+    private let geoCoder = CLGeocoder()
+    
     @IBOutlet weak var map: MKMapView!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -34,28 +36,57 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         presenter.viewDidLoad()
         presenter.loadWeather(city: city!)
         presenter.getLocationByCityName(city: city!)
+        
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        setupMapViewClick()
+    }
+    
+    
+    private func setupMapViewClick(){
+        let regognizer = UITapGestureRecognizer(target: self, action: #selector(mapDidTap(sender:)))
+        self.map.addGestureRecognizer(regognizer)
+    }
+    
+    
+    
+    @objc func mapDidTap(sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            guard let coordinate = map?.convert(sender.location(in: map), toCoordinateFrom: map) else {
+                return
+            }
+            
+            
+            self.getLocationName(location: coordinate, callback: {
+                self.showMarker(location: coordinate, title: $0)
+            })
+            
+            
+        }
     }
     
 }
 
-extension DetailViewController : DetailView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension DetailViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
     
     func showLocationOnMap(location: CLLocationCoordinate2D) {
-        showMarker(location: location)
-        print("get location ->  \(location.latitude) - \(location.longitude)")
+        self.showMarker(location: location, title: city!)
+        self.zoomToMarker(location: location)
     }
     
     func showErrorLocation(value: String) {
-        
-        let actionSheet  = UIAlertController(title: "Ошибка определения локации", message: "Ну удалось найти координаты \(city!)", preferredStyle: .actionSheet)
-        
+        let actionSheet  = UIAlertController(
+            title: "Ошибка определения локации",
+            message: "Ну удалось найти координаты \(city!)",
+            preferredStyle: .actionSheet
+        )
             actionSheet.addAction(UIAlertAction(title: "Ok" , style: .cancel, handler: {_ in
                 self.navigationController?.popViewController(animated: true)
             }))
@@ -68,10 +99,7 @@ extension DetailViewController : DetailView, UICollectionViewDataSource, UIColle
         return datasource.count
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.size.width, height:CGFloat(collectionView.bounds.size.height))
     }
     
@@ -84,12 +112,59 @@ extension DetailViewController : DetailView, UICollectionViewDataSource, UIColle
     }
     
     
+    func getLocationName(location: CLLocationCoordinate2D, callback: @escaping (String) -> Void){
+     
+        let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        self.geoCoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error -> Void in
+
+            guard let placeMark = placemarks?.first else {
+                callback("Unknown")
+                return
+            }
+
+            if let city = placeMark.subAdministrativeArea {
+                callback(city)
+                 return
+            }
+                
+
+            if let country = placeMark.country {
+               callback(country)
+                return
+            }
+            
+        })
+    }
+    
+}
+
+extension DetailViewController: DetailView{
+    
+    func showMarker(location: CLLocationCoordinate2D, title: String){
+        
+        self.map?.removeAnnotations(self.map?.annotations ?? [])
+        
+        let annotation = MKPointAnnotation()
+            annotation.title = title
+            annotation.subtitle = "Место: \(title)"
+            annotation.coordinate = location
+        
+        self.map?.addAnnotation(annotation)
+    }
+    
+    
+    func zoomToMarker(location: CLLocationCoordinate2D){
+        let span = MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)
+        let region = MKCoordinateRegion(center: location,span: span)
+        
+        self.map?.setRegion(region, animated: true)
+    }
+    
     func showErrorScreen(error: String) {
         loader.showError(value: error)
         collectionView.isHidden = true
         map?.isHidden = true
     }
-    
     
     func showNoContentScreen() {
         loader.showEmptyView()
@@ -111,29 +186,4 @@ extension DetailViewController : DetailView, UICollectionViewDataSource, UIColle
         collectionView.isHidden = false
         map?.isHidden = false
     }
-    
-    
-    func showMarker(location: CLLocationCoordinate2D){
-
-        let annotations = self.map?.annotations
-        self.map?.removeAnnotations(annotations!)
-        
-
-        //anotation (pin)
-        let annotation = MKPointAnnotation()
-            annotation.title = city!
-            annotation.subtitle = "Вы искали \(city!)"
-            annotation.coordinate = location
-        
-        
-        self.map?.addAnnotation(annotation)
-        
-        
-        //zooming
-        let span = MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)
-        let region = MKCoordinateRegion(center: location,span: span)
-        
-        self.map?.setRegion(region, animated: true)
-    }
-    
 }

@@ -58,14 +58,11 @@ class DetailPresenterImpl: DetailPresenter{
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { (n) in
-                print("loadWeather -> onNext")
                 self.view?.showResultScreen(result: n)
             }, onError: { (error) in
                 self.view?.showErrorScreen(error: error.localizedDescription)
             }, onCompleted: {
-                print("loadWeather -> onCompleted")
             }, onDisposed: {
-                print("loadWeather -> onDisposed")
             }).disposed(by: disposeBag)
     }
     
