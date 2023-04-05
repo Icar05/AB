@@ -105,7 +105,7 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width, height:CGFloat(collectionView.bounds.size.height))
+        return CGSize(width: collectionView.bounds.size.width + 1, height:CGFloat(collectionView.bounds.size.height))
     }
     
     
