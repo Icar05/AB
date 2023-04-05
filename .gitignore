@@ -1,3 +1,4 @@
 *.xcuserstate
 *.xcbkptlist
 ABProject.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ABProject/.DS_Store
