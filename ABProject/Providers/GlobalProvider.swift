@@ -15,20 +15,18 @@ class GlobalProvider{
     
     
     private let decoder = JSONDecoder()
-    
-    private let testKey = "bfe6f23754abc6a8d183b5a28ffaad23"
-    
+        
     private let lang = "ua"
     
     
     
     func getWeather(city: String) -> Observable<WeatherResponce> {
-        print("request: \(getUrl(city: city))")
+//        print("request: \(getUrl(city: city))")
         return getWeather<WeatherResponce>(request: getUrl(city: city))
     }
     
     func getWeather(coords: CLLocationCoordinate2D) -> Observable<List> {
-        print("request: \(getUrl(coords: coords))")
+//        print("request: \(getUrl(coords: coords))")
         return getWeather<List>(request: getUrl(coords: coords))
     }
 
@@ -75,11 +73,11 @@ class GlobalProvider{
 
     
     private func getUrl(coords: CLLocationCoordinate2D) -> String{
-        return "https://api.openweathermap.org/data/2.5/weather?lat=\(coords.latitude)&lon=\(coords.longitude)&APPID=\(testKey)&lang=\(lang)"
+        return "https://api.openweathermap.org/data/2.5/weather?lat=\(coords.latitude)&lon=\(coords.longitude)&APPID=bfe6f23754abc6a8d183b5a28ffaad23&lang=\(lang)"
     }
     
     private func getUrl(city: String)-> String{
-        return "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=\(testKey)&lang=\(lang)"
+        return "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=bfe6f23754abc6a8d183b5a28ffaad23&lang=\(lang)"
     }
 }
 

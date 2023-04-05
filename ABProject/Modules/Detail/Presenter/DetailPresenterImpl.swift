@@ -35,15 +35,11 @@ class DetailPresenterImpl: DetailPresenter{
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { (n) in
-                print("getLocationByCity -> onNext")
                 self.view?.showLocationOnMap(location: n)
             }, onError: { (error) in
-                print("getLocationByCity -> onError while get location -> \(error.localizedDescription)")
                 self.view?.showErrorLocation(value: error.localizedDescription)
             }, onCompleted: {
-                print("getLocationByCity -> onCompleted")
             }, onDisposed: {
-                print("getLocationByCity -> onDisposed")
             }).disposed(by: disposeBag)
     }
     
